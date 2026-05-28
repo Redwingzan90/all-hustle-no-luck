@@ -492,5 +492,5 @@ export function formatTime(seconds: number): string {
 export const defaultTracks: Track[] = [
   { name: "Blackedout Baseline", src: "/track1.mp3" },
   { name: "Track 2", src: "/track2.mp3" },
-  { name: "Track 3", src: "/track3.mp3" },
+  { name: "3AM \u2022 Country Lunatic", src: "/track3.mp3" },
 ];
