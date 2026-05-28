@@ -6,10 +6,63 @@ import heroImg from "@/assets/hero.jpg";
 import studioImg from "@/assets/studio.jpg";
 import needleImg from "@/assets/needle.jpg";
 import knucklesImg from "@/assets/knuckles.jpg";
-import g1 from "@/assets/g1.jpg";
-import g2 from "@/assets/g2.jpg";
-import g3 from "@/assets/g3.jpg";
-import g4 from "@/assets/g4.jpg";
+import tattoo1 from "@/assets/pink-teddy-bear-heart-tattoo.png";
+import tattoo2 from "@/assets/baby-footprints-memorial-tattoo.png";
+import tattoo3 from "@/assets/rose-script-memorial-tattoo.png";
+import tattoo4 from "@/assets/stitched-rag-doll-tattoo.png";
+import tattoo5 from "@/assets/purple-rose-frame-tattoo.png";
+import tattoo6 from "@/assets/purple-rose-tattoo.png";
+import tattoo7 from "@/assets/cartoon-turtle-tattoo.png";
+import tattoo8 from "@/assets/black-butterfly-tattoo.png";
+import tattoo9 from "@/assets/cracked-hole-3d-tattoo.png";
+import tattoo10 from "@/assets/black-grey-cross-tattoo.png";
+import tattoo11 from "@/assets/blue-flower-script-tattoo.jpeg";
+import tattoo12 from "@/assets/cowboy-clown-tattoo.jpeg";
+import tattoo13 from "@/assets/owl-eye-realism-tattoo.jpeg";
+import tattoo14 from "@/assets/texas-card-symbol-tattoo.jpeg";
+import tattoo15 from "@/assets/angel-memorial-tattoo.jpeg";
+import tattoo16 from "@/assets/crown-roses-leg-tattoo.jpeg";
+import tattoo17 from "@/assets/grim-reaper-sketch-tattoo.jpeg";
+import tattoo18 from "@/assets/religious-cross-leg-tattoo.jpeg";
+import tattoo19 from "@/assets/winged-cross-back-tattoo.jpeg";
+import tattoo20 from "@/assets/jesus-portrait-memorial-tattoo.jpeg";
+import tattoo21 from "@/assets/texan-star-western-tattoo.jpeg";
+import tattoo22 from "@/assets/red-skull-hand-tattoo.jpeg";
+import tattoo23 from "@/assets/red-rose-skull-hand-tattoo.jpeg";
+import tattoo24 from "@/assets/rose-hand-tattoo.jpeg";
+import tattoo26 from "@/assets/illuminati-skull-tattoo.jpeg";
+import tattoo27 from "@/assets/flying-cardinal-tattoo.jpeg";
+import tattoo28 from "@/assets/baby-yoda-tattoo.jpeg";
+import tattoo29 from "@/assets/beast-claw-mark-tattoo.jpeg";
+import tattoo30 from "@/assets/crescent-moon-star-tattoo.jpeg";
+import tattoo31 from "@/assets/geometric-eye-triangle-tattoo.jpeg";
+import tattoo32 from "@/assets/microphone-realism-tattoo.jpeg";
+import tattoo34 from "@/assets/royal-crown-tattoo.jpeg";
+import tattoo35 from "@/assets/venom-mask-tattoo.jpeg";
+import tattoo38 from "@/assets/rose-dreamcatcher-color-tattoo.jpeg";
+import tattoo39 from "@/assets/forest-triangle-tattoo.jpeg";
+import tattoo40 from "@/assets/wolf-head-dark-tattoo.jpeg";
+import tattoo41 from "@/assets/royal-crown-tattoo.jpeg";
+import tattoo42 from "@/assets/tattoo-artist-photo.png";
+import tattoo43 from "@/assets/bar-photo.jpeg";
+import tattoo44 from "@/assets/customer-photo.jpeg";
+import tattoo45 from "@/assets/motorcycle-night-photo.jpeg";
+import tattoo46 from "@/assets/drink-photo.jpeg";
+import tattoo47 from "@/assets/tattoo-life-magazine-cover.jpeg";
+import tattoo48 from "@/assets/tattoo-biz-magazine-cover.jpeg";
+import tattoo49 from "@/assets/tattoo-convention-photo.png";
+import tattoo50 from "@/assets/tattoo-artist-client-photo.jpeg";
+import tattoo51 from "@/assets/reaper-skull-dark-tattoo.jpeg";
+import tattoo52 from "@/assets/skull-rose-memorial-tattoo.jpeg";
+import tattoo53 from "@/assets/grim-reaper-hand-tattoo.jpeg";
+import tattoo54 from "@/assets/skull-rose-portrait-tattoo.jpeg";
+import tattoo55 from "@/assets/lion-shield-portrait.jpeg";
+import tattoo56 from "@/assets/angel-wings-memorial.jpeg";
+import tattoo57 from "@/assets/blue-rose-portrait.jpeg";
+import tattoo58 from "@/assets/skull-angel-memorial.png";
+import tattoo59 from "@/assets/skull-rose-sketch.jpeg";
+import tattoo60 from "@/assets/angel-memorial-dark.jpeg";
+import thomasImg from "@/assets/bar-photo.jpeg";
 import { MusicSettingsPanel, defaultTracks } from "@/components/music-settings-panel";
 
 export const Route = createFileRoute("/")({
@@ -48,10 +101,62 @@ const services = [
 ];
 
 const works = [
-  { src: g1, title: "Skull & Roses Sleeve", meta: "Black & Grey · 14hrs" },
-  { src: g2, title: "Reaper Back Piece", meta: "Black & Grey · 32hrs" },
-  { src: g3, title: "Serpent Mandala", meta: "Linework · 6hrs" },
-  { src: g4, title: "Dagger Chest", meta: "Traditional · 9hrs" },
+  { src: tattoo1, title: "Pink Teddy Bear Heart", meta: "Memorial" },
+  { src: tattoo2, title: "Baby Footprints", meta: "Memorial" },
+  { src: tattoo3, title: "Rose Script Memorial", meta: "Script" },
+  { src: tattoo4, title: "Chucky", meta: "Horror" },
+  { src: tattoo5, title: "Purple Rose Frame", meta: "Floral" },
+  { src: tattoo6, title: "Purple Rose", meta: "Floral" },
+  { src: tattoo7, title: "Cartoon Turtle", meta: "Custom" },
+  { src: tattoo8, title: "Black Butterfly", meta: "Traditional" },
+  { src: tattoo9, title: "Cracked Hole 3D", meta: "Realism" },
+  { src: tattoo10, title: "Black & Grey Cross", meta: "Black & Grey" },
+  { src: tattoo11, title: "Blue Flower Script", meta: "Script" },
+  { src: tattoo12, title: "Cowboy Clown", meta: "Custom" },
+  { src: tattoo13, title: "Owl Eye Realism", meta: "Realism" },
+  { src: tattoo14, title: "Texas Card Symbol", meta: "Traditional" },
+  { src: tattoo15, title: "Angel Memorial", meta: "Memorial" },
+  { src: tattoo16, title: "Crown & Roses Leg", meta: "Floral" },
+  { src: tattoo17, title: "Grim Reaper Sketch", meta: "Black Work" },
+  { src: tattoo18, title: "Religious Cross Leg", meta: "Traditional" },
+  { src: tattoo19, title: "Winged Cross Back", meta: "Traditional" },
+  { src: tattoo20, title: "Memorabilia", meta: "Memorial" },
+  { src: tattoo21, title: "Texan Star Western", meta: "Custom" },
+  { src: tattoo22, title: "Red Skull Hand", meta: "Black Work" },
+  { src: tattoo23, title: "Red Rose Skull Hand", meta: "Black & Grey" },
+  { src: tattoo24, title: "Red Rose Hand", meta: "Floral" },
+  { src: tattoo26, title: "Illuminati Skull", meta: "Dark" },
+  { src: tattoo27, title: "Flying Cardinal", meta: "Color" },
+  { src: tattoo28, title: "Baby Yoda", meta: "Pop Culture" },
+  { src: tattoo29, title: "Beast Claw Mark", meta: "Custom" },
+  { src: tattoo30, title: "Crescent Moon Star", meta: "Geometric" },
+  { src: tattoo31, title: "Geometric Eye Triangle", meta: "Geometric" },
+  { src: tattoo32, title: "Microphone Realism", meta: "Realism" },
+  { src: tattoo34, title: "Royal Crown", meta: "Custom" },
+  { src: tattoo35, title: "Venom Mask", meta: "Pop Culture" },
+  { src: tattoo38, title: "Rose Dreamcatcher Color", meta: "Color" },
+  { src: tattoo39, title: "Forest Triangle", meta: "Geometric" },
+  { src: tattoo40, title: "Wolf Head Dark", meta: "Black Work" },
+  { src: tattoo41, title: "Royal Crown", meta: "Custom" },
+  { src: tattoo42, title: "Tattoo Artist At Work", meta: "Studio" },
+  { src: tattoo43, title: "Couple At The Bar", meta: "Lifestyle" },
+  { src: tattoo44, title: "Customer Portrait", meta: "Studio" },
+  { src: tattoo45, title: "Motorcycle Night", meta: "Custom" },
+  { src: tattoo46, title: "Couple Drinks", meta: "Lifestyle" },
+  { src: tattoo47, title: "Tattoo Life Magazine", meta: "Feature" },
+  { src: tattoo48, title: "Tattoo Biz Magazine", meta: "Feature" },
+  { src: tattoo49, title: "Tattoo Convention", meta: "Event" },
+  { src: tattoo50, title: "Artist & Client", meta: "Studio" },
+  { src: tattoo51, title: "All Hustle No Luck", meta: "Studio" },
+  { src: tattoo52, title: "Fluorescent Ink", meta: "UV" },
+  { src: tattoo53, title: "Glow Work", meta: "UV" },
+  { src: tattoo54, title: "Tattoo Shop", meta: "Studio" },
+  { src: tattoo55, title: "Tattoo Shop", meta: "Studio" },
+  { src: tattoo56, title: "Tattoo Shop", meta: "Studio" },
+  { src: tattoo57, title: "Tattoo Shop", meta: "Studio" },
+  { src: tattoo58, title: "All Hustle No Luck", meta: "Studio" },
+  { src: tattoo59, title: "All Hustle No Luck", meta: "Studio" },
+  { src: tattoo60, title: "All Hustle No Luck", meta: "Studio" },
 ];
 
 const faqs = [
@@ -799,6 +904,11 @@ function Services() {
 }
 
 function Works() {
+  const [showAll, setShowAll] = useState(false);
+  const VISIBLE_COUNT = 4;
+  const visibleWorks = showAll ? works : works.slice(0, VISIBLE_COUNT);
+  const hiddenCount = works.length - VISIBLE_COUNT;
+
   return (
     <section id="works" className="relative py-20 sm:py-32 px-5 sm:px-6 lg:px-16 border-t border-border overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -810,25 +920,113 @@ function Works() {
           <a href="https://www.facebook.com/p/All-Hustle-No-Luck-Tattoo-61558435770253/" target="_blank" rel="noopener noreferrer" className="font-mono-grit text-xs text-primary border-b border-primary pb-1 hover:text-bone hover:border-bone">VIEW ARCHIVE ON FACEBOOK →</a>
         </div>
 
-        {/* Asymmetric broken grid */}
-        <div className="grid grid-cols-12 gap-3 sm:gap-4 md:gap-6">
-          <figure className="col-span-12 md:col-span-7 relative group overflow-hidden">
-            <img src={works[0].src} alt={works[0].title} loading="lazy" className="w-full h-[50vh] sm:h-[60vh] object-cover reveal" />
-            <Caption {...works[0]} large />
-          </figure>
-          <figure className="col-span-12 md:col-span-5 relative group overflow-hidden md:translate-y-12">
-            <img src={works[1].src} alt={works[1].title} loading="lazy" className="w-full h-[50vh] sm:h-[60vh] object-cover reveal" />
-            <Caption {...works[1]} />
-          </figure>
-          <figure className="col-span-12 md:col-span-4 relative group overflow-hidden md:-translate-y-8">
-            <img src={works[2].src} alt={works[2].title} loading="lazy" className="w-full h-[40vh] sm:h-[50vh] object-cover reveal" />
-            <Caption {...works[2]} />
-          </figure>
-          <figure className="col-span-12 md:col-span-8 relative group overflow-hidden">
-            <img src={works[3].src} alt={works[3].title} loading="lazy" className="w-full h-[40vh] sm:h-[50vh] object-cover reveal" />
-            <Caption {...works[3]} large />
-          </figure>
+        {/* Gallery grid with tattoo photos - styled as polaroid cards */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          {visibleWorks.map((work, i) => (
+            <figure 
+              key={i} 
+              className={`relative group ${i === 0 && !showAll ? 'md:col-span-2 md:row-span-2' : ''}`}
+            >
+              {/* Polaroid-style frame */}
+              <div className={`relative bg-card p-2 sm:p-3 shadow-lg gallery-card ${i === 0 && !showAll ? 'featured' : ''}`}>
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Image container */}
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={work.src} 
+                    alt={work.title} 
+                    loading="lazy" 
+                    className={`w-full object-cover gallery-img ${i === 0 && !showAll ? 'aspect-[4/5] max-h-[500px]' : 'aspect-[3/4]'}`}
+                  />
+                  {/* Subtle top glow line */}
+                  <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+                
+                {/* Caption bar - styled like photo sticker */}
+                <div className="mt-2 sm:mt-3 px-1">
+                  <p className="font-mono-grit text-[9px] sm:text-[10px] text-primary/70 tracking-[0.2em]">— {work.meta} —</p>
+                  <h3 className="font-stencil text-bone text-sm sm:text-base leading-tight mt-1">{work.title}</h3>
+                </div>
+              </div>
+              
+              {/* Decorative elements - ink splatter dots */}
+              <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <div className="absolute -bottom-1 -left-1 w-1 h-1 rounded-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100" />
+            </figure>
+          ))}
+          
+          {/* Show more card - styled as mystery polaroid */}
+          {!showAll && hiddenCount > 0 && (
+            <figure 
+              className="relative group cursor-pointer"
+              onClick={() => setShowAll(true)}
+            >
+              <div className="relative bg-card p-2 sm:p-3 shadow-lg gallery-card aspect-[3/4] flex flex-col">
+                {/* Corner accents - same as regular cards */}
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary/30 group-hover:border-primary transition-all duration-300" />
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary/30 group-hover:border-primary transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary/30 group-hover:border-primary transition-all duration-300" />
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary/30 group-hover:border-primary transition-all duration-300" />
+                
+                {/* Blurred preview collage as background */}
+                <div className="absolute inset-2 grid grid-cols-2 grid-rows-2 gap-[3px] overflow-hidden opacity-25 rounded-sm">
+                  {works.slice(VISIBLE_COUNT, VISIBLE_COUNT + 4).map((work, i) => (
+                    <img 
+                      key={i}
+                      src={work.src} 
+                      alt=""
+                      className="w-full h-full object-cover blur-sm scale-110" 
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+                
+                {/* Dark overlay */}
+                <div className="absolute inset-2 bg-gradient-to-b from-background/90 via-background/70 to-background/90 backdrop-blur-sm rounded-sm" />
+                
+                {/* Content */}
+                <div className="relative flex flex-col items-center justify-center h-full text-center z-10 px-2">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-primary/50 flex items-center justify-center mb-2 sm:mb-3 group-hover:border-primary group-hover:bg-primary/10 transition-all duration-500">
+                    <span className="font-stencil text-2xl sm:text-3xl text-primary">+{hiddenCount}</span>
+                  </div>
+                  <span className="font-stencil text-bone text-base sm:text-lg tracking-wider">MORE WOUNDS</span>
+                  <div className="mt-2 sm:mt-3 flex items-center gap-2">
+                    <span className="w-3 h-[1px] bg-primary/50" />
+                    <span className="font-mono-grit text-[9px] sm:text-[10px] text-primary tracking-[0.3em] animate-pulse">UNVEIL ALL</span>
+                    <span className="w-3 h-[1px] bg-primary/50" />
+                  </div>
+                </div>
+                
+                {/* Ink splatter dots - same as regular cards */}
+                <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                <div className="absolute -bottom-1 -left-1 w-1 h-1 rounded-full bg-primary/40 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100" />
+              </div>
+            </figure>
+          )}
         </div>
+
+        {/* Show less button when all are visible */}
+        {showAll && (
+          <div className="mt-12 flex justify-center">
+            <button 
+              onClick={() => { setShowAll(false); document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="group relative font-stencil text-sm px-8 py-4 border-2 border-border text-bone hover:border-primary hover:text-primary transition-all duration-500 overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary group-hover:bg-bone transition-colors duration-500" />
+                SHOW LESS
+                <span className="w-2 h-2 rounded-full bg-primary group-hover:bg-bone transition-colors duration-500" />
+              </span>
+              <span className="absolute inset-0 bg-primary -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              <span className="absolute inset-0 flex items-center justify-center text-background font-stencil text-sm opacity-0 group-hover:opacity-100 transition-opacity z-20">COLLAPSE</span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -882,7 +1080,7 @@ function ArtistBio() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 sm:gap-16 items-center">
         <div className="lg:col-span-5 relative">
           <div className="aspect-[3/4] relative">
-            <img src={needleImg} alt="Thomas - Artist" className="w-full h-full object-cover" />
+            <img src={thomasImg} alt="Thomas - Artist" className="w-full h-full object-cover reveal" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
           </div>
           {/* Decorative frame */}

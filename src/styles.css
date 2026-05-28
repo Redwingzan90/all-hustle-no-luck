@@ -251,12 +251,125 @@
 .crt-corners > span:nth-child(3) { bottom: 0; left: 0; border-right: 0; border-top: 0; }
 .crt-corners > span:nth-child(4) { bottom: 0; right: 0; border-left: 0; border-top: 0; }
 
-/* Image hover reveal */
+/* Image hover reveal - gritty tattoo style */
 .reveal {
-  filter: grayscale(60%) contrast(1.1) brightness(0.7);
-  transition: filter 0.7s ease, transform 1s cubic-bezier(.2,.7,.2,1);
+  filter: grayscale(50%) sepia(20%) contrast(1.15) brightness(0.85);
+  transition: filter 0.6s ease, transform 0.8s cubic-bezier(.2,.7,.2,1);
 }
-.reveal:hover { filter: grayscale(0%) contrast(1.15) brightness(0.95); transform: scale(1.04); }
+.reveal:hover { 
+  filter: grayscale(10%) sepia(10%) contrast(1.2) brightness(0.92); 
+  transform: scale(1.03); 
+}
+
+/* Tattoo gallery image styling */
+.tattoo-img {
+  filter: grayscale(45%) sepia(25%) contrast(1.1) brightness(0.88);
+  transition: all 0.6s cubic-bezier(.2,.7,.2,1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(122,57,25,0.2);
+}
+.tattoo-img:hover {
+  filter: grayscale(5%) sepia(15%) contrast(1.18) brightness(0.95);
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7), 0 0 20px rgba(122,57,25,0.3), inset 0 0 0 1px rgba(122,57,25,0.4);
+}
+
+/* Wounded image - styled for portfolio */
+.wounded-img {
+  position: relative;
+  filter: grayscale(50%) sepia(15%) contrast(1.12) brightness(0.9);
+  box-shadow: 
+    0 0 0 1px rgba(122,57,25,0.15),
+    0 4px 16px rgba(0,0,0,0.5);
+  transition: all 0.5s ease;
+}
+.wounded-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(122,57,25,0.1) 0%,
+    transparent 50%,
+    rgba(0,0,0,0.15) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.wounded-img:hover {
+  filter: grayscale(10%) sepia(10%) contrast(1.15) brightness(0.95);
+  box-shadow: 
+    0 0 0 1px rgba(122,57,25,0.35),
+    0 8px 25px rgba(0,0,0,0.6),
+    0 0 30px rgba(122,57,25,0.15);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Gallery card styling - polaroid frames */
+.gallery-card {
+  background: oklch(0.12 0.008 25);
+  border: 1px solid oklch(0.25 0.02 30 / 50%);
+  transition: all 0.5s cubic-bezier(.2,.7,.2,1);
+  position: relative;
+}
+.gallery-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    transparent 30%,
+    transparent 70%,
+    var(--primary) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+.gallery-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 12px 40px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(122,57,25,0.3),
+    inset 0 0 30px rgba(122,57,25,0.05);
+  border-color: rgba(122,57,25,0.4);
+}
+.gallery-card:hover::before {
+  opacity: 0.15;
+}
+
+/* Gallery image styling */
+.gallery-img {
+  filter: grayscale(40%) sepia(20%) contrast(1.1) brightness(0.88);
+  transition: all 0.6s cubic-bezier(.2,.7,.2,1);
+}
+.gallery-img:hover {
+  filter: grayscale(5%) sepia(10%) contrast(1.15) brightness(0.95);
+}
+
+/* Featured gallery item - larger display */
+.gallery-card.featured .gallery-img {
+  max-height: 500px;
+}
+
+/* Fresh wound overlay */
+.fresh-wound {
+  position: relative;
+}
+.fresh-wound::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      rgba(0,0,0,0.03) 4px
+    );
+  pointer-events: none;
+  z-index: 2;
+}
 
 /* Splatter dots */
 .splatter {
