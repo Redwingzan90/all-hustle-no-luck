@@ -125,8 +125,8 @@ export function MusicSettingsPanel({
     
     // Apply bass gain if chain exists (skip expensive initialization)
     if (audioChainRef.current) {
-      // Map 0-100 slider to -6 to +6 dB
-      const bassGain = ((newBass[0] - 50) / 50) * 6;
+      // Map 0-100 slider to -12 to +12 dB (more bass boost)
+      const bassGain = ((newBass[0] - 50) / 50) * 12;
       audioChainRef.current.bassFilter.gain.value = bassGain;
     }
   }, []); // No dependencies - uses refs
@@ -144,8 +144,8 @@ export function MusicSettingsPanel({
     
     // Apply treble gain if chain exists
     if (audioChainRef.current) {
-      // Map 0-100 slider to -6 to +6 dB
-      const trebleGain = ((newTreble[0] - 50) / 50) * 6;
+      // Map 0-100 slider to -12 to +12 dB (more treble boost)
+      const trebleGain = ((newTreble[0] - 50) / 50) * 12;
       audioChainRef.current.trebleFilter.gain.value = trebleGain;
       setTrebleEnabled(true);
     }
@@ -384,7 +384,7 @@ export function MusicSettingsPanel({
                 "font-mono-grit text-[9px] ml-auto",
                 bass[0] > 50 ? "text-primary" : "text-muted-foreground"
               )}>
-                {bass[0] > 50 ? "+" : ""}{Math.round(((bass[0] - 50) / 50) * 6)}
+                {bass[0] > 50 ? "+" : ""}{Math.round(((bass[0] - 50) / 50) * 12)}
               </span>
               {!bassEnabled && (
                 <span className="font-mono-grit text-[9px] text-muted-foreground animate-pulse">MOVE TO ACTIVATE</span>
@@ -394,7 +394,7 @@ export function MusicSettingsPanel({
               className="flex items-center gap-4"
               onPointerDown={handleAudioInteraction}
             >
-              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">-6</span>
+              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">-12</span>
               <Slider
                 value={bass}
                 onValueChange={handleBassChange}
@@ -403,7 +403,7 @@ export function MusicSettingsPanel({
                 className="flex-1"
                 aria-label="Bass"
               />
-              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">+6</span>
+              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">+12</span>
             </div>
           </div>
 
@@ -428,7 +428,7 @@ export function MusicSettingsPanel({
                 "font-mono-grit text-[9px] ml-auto",
                 treble[0] > 50 ? "text-primary" : "text-muted-foreground"
               )}>
-                {treble[0] > 50 ? "+" : ""}{Math.round(((treble[0] - 50) / 50) * 6)}
+                {treble[0] > 50 ? "+" : ""}{Math.round(((treble[0] - 50) / 50) * 12)}
               </span>
               {!trebleEnabled && (
                 <span className="font-mono-grit text-[9px] text-muted-foreground animate-pulse">MOVE TO ACTIVATE</span>
@@ -438,7 +438,7 @@ export function MusicSettingsPanel({
               className="flex items-center gap-4"
               onPointerDown={handleAudioInteraction}
             >
-              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">-6</span>
+              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">-12</span>
               <Slider
                 value={treble}
                 onValueChange={handleTrebleChange}
@@ -447,7 +447,7 @@ export function MusicSettingsPanel({
                 className="flex-1"
                 aria-label="Treble"
               />
-              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">+6</span>
+              <span className="font-mono-grit text-[10px] text-muted-foreground w-8">+12</span>
             </div>
           </div>
 
