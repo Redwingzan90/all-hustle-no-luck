@@ -62,7 +62,7 @@ import tattoo57 from "@/assets/blue-rose-portrait.jpeg";
 import tattoo58 from "@/assets/skull-angel-memorial.png";
 import tattoo59 from "@/assets/skull-rose-sketch.jpeg";
 import tattoo60 from "@/assets/angel-memorial-dark.jpeg";
-import thomasImg from "@/assets/bar-photo.jpeg";
+import thomasImg from "@/assets/thomas.jpg";
 import { MusicSettingsPanel, defaultTracks } from "@/components/music-settings-panel";
 
 export const Route = createFileRoute("/")({
