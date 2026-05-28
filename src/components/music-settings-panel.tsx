@@ -75,13 +75,15 @@ export function MusicSettingsPanel({
       const bassFilter = context.createBiquadFilter();
       bassFilter.type = "lowshelf";
       bassFilter.frequency.value = 200;
-      bassFilter.gain.value = 0;
+      // Apply current bass value (default 50 = 0dB)
+      bassFilter.gain.value = ((bass[0] - 50) / 50) * 6;
       
       // Create treble filter (highshelf at ~3000Hz for treble boost)
       const trebleFilter = context.createBiquadFilter();
       trebleFilter.type = "highshelf";
       trebleFilter.frequency.value = 3000;
-      trebleFilter.gain.value = 0;
+      // Apply current treble value (default 50 = 0dB)
+      trebleFilter.gain.value = ((treble[0] - 50) / 50) * 6;
       
       // Create gain node for volume control
       const gainNode = context.createGain();
@@ -95,13 +97,14 @@ export function MusicSettingsPanel({
       
       audioChainRef.current = { context, source, bassFilter, trebleFilter, gainNode };
       setBassEnabled(true);
+      setTrebleEnabled(true);
       initInProgressRef.current = false; // Reset after successful init
       console.log('Audio chain initialized for bass boost');
     } catch (err) {
       console.error('Failed to initialize audio chain:', err);
       initInProgressRef.current = false; // Reset so it can try again
     }
-  }, [audioRef, volume]);
+  }, [audioRef, volume, bass, treble]);
 
   // Update volume - handle both normal and bass-enhanced playback
   useEffect(() => {
@@ -154,6 +157,23 @@ export function MusicSettingsPanel({
       audioChainRef.current.context.resume();
     }
   }, [isPlaying]);
+
+  // Auto-initialize audio chain when music starts playing
+  useEffect(() => {
+    if (isPlaying && !audioChainRef.current && !initInProgressRef.current && audioRef.current) {
+      initAudioChain();
+    }
+  }, [isPlaying, audioRef, initAudioChain]);
+
+  // Sync bass and treble whenever audio chain is created or values change
+  useEffect(() => {
+    if (audioChainRef.current) {
+      const bassGain = ((bass[0] - 50) / 50) * 6;
+      const trebleGain = ((treble[0] - 50) / 50) * 6;
+      audioChainRef.current.bassFilter.gain.value = bassGain;
+      audioChainRef.current.trebleFilter.gain.value = trebleGain;
+    }
+  }, [bass, treble]);
 
   const handleTrackSelect = useCallback((index: number) => {
     onTrackChange(index);
@@ -491,6 +511,6 @@ export function formatTime(seconds: number): string {
 // Demo tracks - update these to match your actual audio files
 export const defaultTracks: Track[] = [
   { name: "Blackedout Baseline", src: "/track1.mp3" },
-  { name: "Track 2", src: "/track2.mp3" },
+  { name: "F*CK AROUND & FIND OUT \u2014 Redneck Outlaw", src: "/track2.mp3" },
   { name: "3AM \u2022 Country Lunatic", src: "/track3.mp3" },
 ];
